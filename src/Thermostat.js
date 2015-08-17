@@ -5,11 +5,11 @@ var Thermostat = function Thermostat() {
 
 Thermostat.prototype.up = function() {
   if (this.save_mode === 'on' && this.temperature === 25) {
-    return this.temperature = 25
+    return this.temperature = 25;
   }
 
   if (this.save_mode === 'off' && this.temperature === 32) {
-    return this.temperature = 32
+    return this.temperature = 32;
   }
 
   return ++this.temperature;
@@ -28,16 +28,25 @@ Thermostat.prototype.change_save_mode = function() {
   }
 
   else {
-    return this.save_mode = 'off'
+    return this.save_mode = 'off';
   }
 };
 
 Thermostat.prototype.reset_temperature = function() {
-  return this.temperature = 20
+  return this.temperature = 20;
 };
 
 Thermostat.prototype.colour = function() {
+
   if (this.temperature < 18) {
-    return 'green'
+    return 'green';
+  }
+
+  if (this.temperature < 25) {
+    return 'yellow';
+  }
+
+  else {
+    return 'red';
   }
 };

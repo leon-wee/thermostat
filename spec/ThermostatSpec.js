@@ -89,4 +89,19 @@ describe('Thermostat', function() {
     });
   });
 
+  describe('thermostat colour', function() {
+    it('shows yellow when temperature is below 25', function() {
+      thermostat.temperature = 25
+      thermostat.down()
+      expect(thermostat.colour()).toEqual('yellow')
+    });
+  });
+
+  describe('thermostat colour', function() {
+    it('shows red otherwise', function() {
+      thermostat.temperature = 26
+      expect(thermostat.colour()).toEqual('red')
+    });
+  });
+
 });
