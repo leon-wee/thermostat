@@ -81,5 +81,12 @@ describe('Thermostat', function() {
     });
   });
 
+  describe('thermostat colour', function() {
+    it('shows green when temperature is below 18', function() {
+      thermostat.temperature = 18
+      thermostat.down()
+      expect(thermostat.colour()).toEqual('green')
+    });
+  });
 
 });

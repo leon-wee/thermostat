@@ -35,3 +35,9 @@ Thermostat.prototype.change_save_mode = function() {
 Thermostat.prototype.reset_temperature = function() {
   return this.temperature = 20
 };
+
+Thermostat.prototype.colour = function() {
+  if (this.temperature < 18) {
+    return 'green'
+  }
+};
