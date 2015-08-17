@@ -36,7 +36,7 @@ describe('Thermostat', function() {
 
   describe('default saving mode', function() {
     it('is off', function() {
-      expect(thermostat.save_mode).toEqual('off')
+      expect(thermostat.save_mode).toEqual('on')
     });
   });
 
@@ -93,7 +93,7 @@ describe('Thermostat', function() {
     it('shows yellow when temperature is below 25', function() {
       thermostat.temperature = 25
       thermostat.down()
-      expect(thermostat.colour()).toEqual('yellow')
+      expect(thermostat.colour()).toEqual('orange')
     });
   });
 

@@ -1,12 +1,14 @@
-<h1>20 &#8451</h1>
 <div>
   <form action="">
-    <input type="submit" value="&#8593" />
-    <input type="submit" value="&#8595" />
-    Power Saving: <input type="checkbox" name="mode" />
+    <div><span id="temperature"></span> &#8451</div>
+    <button id='up' type="button">&#8593</button>
+    <button id="down" type="button">&#8595</button>
+    Power Saving: <input id='mode' type="checkbox" />
     <br>
     <br>
-    <input type="submit" value="Reset Temperature" />
+    <button id="reset" type="button">Reset</button>
   </form>
+  <script src="src/Thermostat.js"></script>
+  <script src="src/app.js"></script>
 </div>
 
