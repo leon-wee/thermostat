@@ -1,5 +1,6 @@
 var Thermostat = function Thermostat() {
   this.temperature = 20
+  this.save_mode = 'off'
 };
 
 Thermostat.prototype.up = function() {
@@ -8,7 +9,17 @@ Thermostat.prototype.up = function() {
 
 Thermostat.prototype.down = function() {
   if (this.temperature < 11) {
-    return 10
+    return 10;
   }
   return --this.temperature;
+};
+
+Thermostat.prototype.change_save_mode = function() {
+  if (this.save_mode === 'off') {
+    return this.save_mode = 'on';
+  }
+
+  else {
+    return this.save_mode = 'off'
+  }
 };

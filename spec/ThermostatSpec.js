@@ -34,5 +34,27 @@ describe('Thermostat', function() {
     });
   });
 
+  describe('default saving mode', function() {
+    it('is off', function() {
+      expect(thermostat.save_mode).toEqual('off')
+    });
+  });
+
+  describe('change save mode', function() {
+    it('switches save mode to on if off', function() {
+      thermostat.save_mode = 'off'
+      thermostat.change_save_mode()
+      expect(thermostat.save_mode).toEqual('on')
+    });
+  });
+
+  describe('change save mode', function() {
+    it('switches save mode to off if on', function() {
+      thermostat.save_mode = 'on'
+      thermostat.change_save_mode()
+      expect(thermostat.save_mode).toEqual('off')
+    });
+  });
+
 
 });
