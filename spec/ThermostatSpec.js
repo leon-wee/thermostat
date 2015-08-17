@@ -74,5 +74,12 @@ describe('Thermostat', function() {
     });
   });
 
+  describe('reset button', function() {
+    it('returns the temperature back to default', function() {
+      thermostat.reset_temperature()
+      expect(thermostat.temperature).toEqual(20)
+    });
+  });
+
 
 });

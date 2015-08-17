@@ -31,3 +31,7 @@ Thermostat.prototype.change_save_mode = function() {
     return this.save_mode = 'off'
   }
 };
+
+Thermostat.prototype.reset_temperature = function() {
+  return this.temperature = 20
+};
