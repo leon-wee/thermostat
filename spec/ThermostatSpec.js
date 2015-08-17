@@ -56,5 +56,23 @@ describe('Thermostat', function() {
     });
   });
 
+  describe('maximum temperature', function() {
+    it('when save mode is on', function() {
+      thermostat.save_mode = 'on'
+      thermostat.temperature = 25
+      thermostat.up()
+      expect(thermostat.temperature).toEqual(25)
+    });
+  });
+
+  describe('maximum temperature', function() {
+    it('when save mode is off', function() {
+      thermostat.save_mode = 'off'
+      thermostat.temperature = 32
+      thermostat.up()
+      expect(thermostat.temperature).toEqual(32)
+    });
+  });
+
 
 });

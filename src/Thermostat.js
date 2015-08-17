@@ -4,6 +4,14 @@ var Thermostat = function Thermostat() {
 };
 
 Thermostat.prototype.up = function() {
+  if (this.save_mode === 'on' && this.temperature === 25) {
+    return this.temperature = 25
+  }
+
+  if (this.save_mode === 'off' && this.temperature === 32) {
+    return this.temperature = 32
+  }
+
   return ++this.temperature;
 };
 
