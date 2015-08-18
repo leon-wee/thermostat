@@ -60,6 +60,7 @@ button {
   transform: scale(0.25, 0.25);
   margin-top: -48%;
   margin-left: -20%;
+  opacity: 0.8;
 
 }
 
