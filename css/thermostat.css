@@ -59,9 +59,11 @@ button {
   opacity: 1;
 }
 
+
+
 .power {
-  transform: scale(0.25, 0.25);
-  margin-top: -48%;
+  transform: scale(0.2, 0.2);
+  margin-top: -50%;
   margin-left: -20%;
   opacity: 0.8;
 
