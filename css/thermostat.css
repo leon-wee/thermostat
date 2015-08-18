@@ -1,12 +1,68 @@
 body {
-
-  margin-left: 20px;
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../images/tree.jpg) no-repeat center center fixed;
           -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+}
+
+section {
+  display:block;
+  position: relative;
+  width: 480px;
+  height: 300px;
+  color: white;
+  margin:auto;
+  font-size: 90px;
 
 }
+
+h1 {
+
+  opacity: 0.8;
+  margin-left: 0%;
+  margin-top: 55%;
+  height: 40px;
+
+}
+
+.btn-group {
+
+  margin-left: 16%;
+
+}
+
+button {
+
+  font-size: 100px;
+  padding: 0;
+  border: none;
+  background: none;
+  display: inline-block;
+
+}
+
+.plus {
+  color: white;
+
+}
+
+.minus {
+  color: white;
+}
+
+.reset {
+  color: white;
+
+}
+
+.power {
+  transform: scale(0.25, 0.25);
+  margin-top: -48%;
+  margin-left: -20%;
+
+}
+
+
 
 

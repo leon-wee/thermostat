@@ -39,7 +39,7 @@ reset.onclick = function() {
   temperature.style.color = thermostat.colour();
 };
 
-var power_save = document.getElementsByTagName('input')[0];
+var power_save = document.getElementsByClassName('power');
 mode.onchange = function() {
   thermostat.change_save_mode();
 };
