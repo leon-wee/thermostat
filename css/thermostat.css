@@ -46,16 +46,17 @@ button {
 
 .plus {
   color: white;
-
+  opacity: 0.8;
 }
 
 .minus {
   color: white;
+  opacity: 0.8;
 }
 
 .reset {
-  color: white;
-
+  color: brown;
+  opacity: 1;
 }
 
 .power {
