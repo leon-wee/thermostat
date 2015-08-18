@@ -11,13 +11,13 @@ section {
   font-size: 200px;
   opacity: 0.8;
   color: white;
-  margin-left: 35%;
+  margin-left: 33%;
 
 }
 
 article {
   font-size: 100px;
-  margin-left: 40%;
+  margin-left: 38%;
   margin-top: -18%;
 }
 
@@ -32,7 +32,7 @@ button {
 
 aside {
   transform: scale(0.2, 0.2);
-  margin-left: 11%;
+  margin-left: 9%;
   margin-top: -13%;
 }
 

@@ -9,11 +9,11 @@ var Thermostat = function Thermostat() {
 };
 
 Thermostat.prototype.up = function() {
-  if (this.save_mode === 'on' && this.temperature === this.maximumOffTemperature) {
+  if (this._saveModeIsOff()) {
     return this.temperature = this.maximumOffTemperature;
   }
 
-  if (this.save_mode === 'off' && this.temperature === this.maximumOnTemperature) {
+  if (this._saveModeIsOn()) {
     return this.temperature = this.maximumOnTemperature;
   }
 
@@ -29,7 +29,7 @@ Thermostat.prototype.down = function() {
 
 Thermostat.prototype.change_save_mode = function() {
 
-  if (this.temperature > 25) {
+  if (this.temperature > this.maximumOffTemperature) {
     return this.temperature = 25
   }
 
@@ -52,7 +52,7 @@ Thermostat.prototype.colour = function() {
     return 'green';
   }
 
-  if (this.temperature < this.orangeTemperature) {
+  else if (this.temperature < this.orangeTemperature) {
     return 'orange';
   }
 
@@ -60,3 +60,18 @@ Thermostat.prototype.colour = function() {
     return 'red';
   }
 };
+
+
+Thermostat.prototype._saveModeIsOff = function() {
+  return this.save_mode === 'on' && this.temperature === this.maximumOffTemperature
+};
+
+
+Thermostat.prototype._saveModeIsOn = function() {
+  return this.save_mode === 'off' && this.temperature === this.maximumOnTemperature
+};
+
+
+
+
+
