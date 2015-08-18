@@ -14,32 +14,32 @@ var thermostat = new Thermostat();
 //   }
 // }
 
-var temperature = document.getElementById('temperature');
+var temperature = document.getElementsByTagName('span')[0];
 temperature.innerHTML = thermostat.temperature;
 temperature.style.color = thermostat.colour();
 
-var up = document.getElementById('up');
+var up = document.getElementsByTagName('button')[0];
 up.onclick = function up() {
   thermostat.up();
   temperature.innerHTML = thermostat.temperature;
   temperature.style.color = thermostat.colour();
 };
 
-var down = document.getElementById('down');
+var down = document.getElementsByTagName('button')[1];
 down.onclick = function() {
   thermostat.down();
   temperature.innerHTML = thermostat.temperature;
   temperature.style.color = thermostat.colour();
 };
 
-var reset = document.getElementById('reset');
+var reset = document.getElementsByTagName('button')[2];
 reset.onclick = function() {
   thermostat.reset_temperature();
   temperature.innerHTML = thermostat.temperature;
   temperature.style.color = thermostat.colour();
 };
 
-var power_save = document.getElementById('mode')
+var power_save = document.getElementsByTagName('input')[0];
 mode.onchange = function() {
   thermostat.change_save_mode();
 };
