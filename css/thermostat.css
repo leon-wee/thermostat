@@ -1,72 +1,43 @@
 body {
-  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../images/tree.jpg) no-repeat center center fixed;
+  background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(../images/city.jpg) no-repeat center center fixed;
           -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+  position: relative;
 }
 
 section {
-  display:block;
-  position: relative;
-  width: 480px;
-  height: 300px;
-  color: white;
-  margin:auto;
-  font-size: 90px;
-
-}
-
-h1 {
-
+  font-size: 200px;
   opacity: 0.8;
-  margin-left: 0%;
-  margin-top: 55%;
-  height: 40px;
+  color: white;
+  margin-left: 35%;
 
 }
 
-.btn-group {
-
-  margin-left: 16%;
-
-
+article {
+  font-size: 100px;
+  margin-left: 40%;
+  margin-top: -18%;
 }
 
 button {
 
-  font-size: 100px;
-  padding: 0;
   border: none;
   background: none;
   display: inline-block;
-
-
-}
-
-.plus {
   color: white;
   opacity: 0.8;
 }
 
-.minus {
-  color: white;
-  opacity: 0.8;
+aside {
+  transform: scale(0.2, 0.2);
+  margin-left: 11%;
+  margin-top: -13%;
 }
 
 .reset {
-  color: brown;
-  opacity: 1;
-}
-
-
-
-.power {
-  transform: scale(0.2, 0.2);
-  margin-top: -50%;
-  margin-left: -20%;
-  opacity: 0.8;
-
+  color: maroon;
 }
 
 
