@@ -28,7 +28,12 @@ Thermostat.prototype.down = function() {
 };
 
 Thermostat.prototype.change_save_mode = function() {
-  if (this.save_mode === 'off') {
+
+  if (this.temperature > 25) {
+    return this.temperature = 25
+  }
+
+  else if (this.save_mode === 'off') {
     return this.save_mode = 'on';
   }
 

@@ -46,13 +46,17 @@ describe('Thermostat', function() {
       thermostat.change_save_mode()
       expect(thermostat.save_mode).toEqual('on')
     });
-  });
 
-  describe('change save mode', function() {
     it('switches save mode to off if on', function() {
       thermostat.save_mode = 'on'
       thermostat.change_save_mode()
       expect(thermostat.save_mode).toEqual('off')
+    });
+
+    it('automatically reverts temperature back to 25', function() {
+      thermostat.temperature = 32
+      thermostat.change_save_mode()
+      expect(thermostat.temperature).toEqual(25)
     });
   });
 
