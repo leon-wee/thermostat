@@ -109,6 +109,12 @@ input.city {
   color: green;
 }
 
+::-webkit-input-placeholder {
+  font-family: Open Sans;
+/*  font-style: italic;*/
+  font-size: 90%;
+}
+
 
 
 
