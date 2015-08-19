@@ -51,6 +51,7 @@ header {
   margin-left: 39%;
   margin-top: 4%;
   width: 20%;
+  letter-spacing: 2px;
 
 }
 
@@ -111,7 +112,6 @@ input.city {
 
 ::-webkit-input-placeholder {
   font-family: Open Sans;
-/*  font-style: italic;*/
   font-size: 90%;
 }
 
