@@ -31,6 +31,7 @@ $(document).ready(function() {
   $('input:text').keypress(function(event) {
     if (event.keyCode == 13) {
       $('input:submit').click();
+      $('input:text').val('');
     }
   });
 
