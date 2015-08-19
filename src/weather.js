@@ -2,10 +2,9 @@ $(document).ready(function() {
   $(".getWeather").click(function() {
 
     var city = $("input:text").val();
-    weatherInfo(city)
-    $('.city_display').html(city);
+    weatherInfo(city);
+    displayCity(city);
   });
-
 
 
   function weatherInfo(city) {
@@ -18,11 +17,22 @@ $(document).ready(function() {
 
   function showWeather(weather_info) {
     $(".weather").html(weather_info.list[0].weather[0].description)
-  }
+  };
 
   function showTemperature(weather_info) {
-    $(".city_temperature").html(weather_info.list[0].temp.day)
-  }
+    $(".city_temperature").html(Math.round(weather_info.list[0].temp.day));
+  };
+
+  function displayCity(city) {
+    $('.city_display').html(city);
+  };
+
+
+  $('input:text').keypress(function(event) {
+    if (event.keyCode == 13) {
+      $('input:submit').click();
+    }
+  });
 
 });
 
