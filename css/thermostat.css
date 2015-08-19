@@ -44,11 +44,18 @@ aside {
 }
 
 header {
-  margin-left: 45%;
+  float: right;
+  padding: 80px 665px 0px 0px;
+  text-align: center;
+  font-family: Code Light;
+  font-size: 20px;
 }
+
+
 
 .weather {
   color: white;
+  text-transform: capitalize;
 }
 
 .city_display {
@@ -69,14 +76,16 @@ header {
     visibility: hidden;
 }
 
+
 input.city {
   position: absolute;
   border-radius: 25px;
   text-align: center;
-  width: 22%;
-  margin-left: 35%;
-  margin-top: 15%;
+  width: 20%;
   opacity: 0.8;
+  float: left;
+  margin-top: 15%;
+  margin-left: 36%;
 }
 
 
