@@ -44,11 +44,13 @@ aside {
 }
 
 header {
-  float: right;
-  padding: 80px 665px 0px 0px;
+  position: absolute;
   text-align: center;
-  font-family: Code Light;
+  font-family: Code Light; /* Code Light */
   font-size: 20px;
+  margin-left: 44%;
+  margin-top: 4%;
+
 }
 
 
@@ -56,6 +58,7 @@ header {
 .weather {
   color: white;
   text-transform: capitalize;
+
 }
 
 .city_display {

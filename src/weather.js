@@ -20,7 +20,7 @@ $(document).ready(function() {
   };
 
   function showTemperature(weather_info) {
-    $(".city_temperature").html(Math.round(weather_info.list[0].temp.day));
+    $(".city_temperature").html(Math.round(weather_info.list[0].temp.day) + '&#8451');
   };
 
   function displayCity(city) {
