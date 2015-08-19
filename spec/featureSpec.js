@@ -49,4 +49,22 @@ var thermostat = new Thermostat();
     expect('span').toContainText(10)
   });
 
+  it('starts default color orange', function() {
+    expect('span').toHaveClass("text--orange");
+  });
+
+  it('changes color to green', function() {
+    for(var i = 0; i < 5; i++) {
+      $('.minus').click();
+    }
+    expect('span').toHaveClass("text--green");
+  });
+
+  it('changes color to red', function() {
+    for(var i = 0; i < 7; i++) {
+      $('.plus').click();
+    }
+    expect('span').toHaveClass("text--red");
+  });
+
 });
