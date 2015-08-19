@@ -89,7 +89,7 @@ describe('Thermostat', function() {
     it('shows green when temperature is below 18', function() {
       thermostat.temperature = 18
       thermostat.down()
-      expect(thermostat.colour()).toEqual('green')
+      expect(thermostat.colour()).toEqual('text--green')
     });
   });
 
@@ -97,14 +97,14 @@ describe('Thermostat', function() {
     it('shows yellow when temperature is below 25', function() {
       thermostat.temperature = 25
       thermostat.down()
-      expect(thermostat.colour()).toEqual('orange')
+      expect(thermostat.colour()).toEqual('text--orange')
     });
   });
 
   describe('thermostat colour', function() {
     it('shows red otherwise', function() {
       thermostat.temperature = 26
-      expect(thermostat.colour()).toEqual('red')
+      expect(thermostat.colour()).toEqual('text--red')
     });
   });
 

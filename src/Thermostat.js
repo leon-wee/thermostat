@@ -49,15 +49,15 @@ Thermostat.prototype.reset_temperature = function() {
 Thermostat.prototype.colour = function() {
 
   if (this.temperature < this.greenTemperature) {
-    return 'green';
+    return 'text--green';
   }
 
   else if (this.temperature < this.orangeTemperature) {
-    return 'orange';
+    return 'text--orange';
   }
 
   else {
-    return 'red';
+    return 'text--red';
   }
 };
 

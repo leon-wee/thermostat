@@ -12,6 +12,20 @@ $(document).ready(function() {
     update();
   });
 
+  $('.minus').click(function() {
+    thermostat.down();
+    update();
+  });
+
+  $('.reset').click(function() {
+    thermostat.reset_temperature();
+    update();
+  });
+
+  $('.power').click(function() {
+    thermostat.change_save_mode();
+  });
+
   // $('span').html(thermostat.temperature)
 
 
