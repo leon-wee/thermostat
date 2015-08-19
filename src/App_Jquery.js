@@ -1,6 +1,8 @@
 $(document).ready(function() {
   var thermostat = new Thermostat();
 
+
+
   function temperatureColour() {
     $('span').removeClass().addClass(thermostat.colour());
   };
@@ -33,7 +35,8 @@ $(document).ready(function() {
     update();
   });
 
-  // $('span').html(thermostat.temperature)
+
+
 
 
 

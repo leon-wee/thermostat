@@ -34,6 +34,23 @@ aside {
   transform: scale(0.2, 0.2);
   margin-left: 9%;
   margin-top: -13%;
+
+}
+
+header {
+  margin-left: 45%;
+}
+
+.weather {
+  color: white;
+}
+
+.city_display {
+  color: white;
+}
+
+.city_temperature {
+  color: white;
 }
 
 .reset {
