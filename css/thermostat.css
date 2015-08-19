@@ -7,18 +7,23 @@ body {
   position: relative;
 }
 
-section {
-  font-size: 200px;
+section p {
+
+  position: absolute;
+  font-size: 160px;
   opacity: 0.8;
   color: white;
-  margin-left: 33%;
+  margin-left: 36%;
+  margin-top: 18%;
 
 }
 
 article {
-  font-size: 100px;
-  margin-left: 38%;
-  margin-top: -18%;
+
+  position: absolute;
+  font-size: 90px;
+  margin-left: 40%;
+  margin-top: 28%;
 }
 
 button {
@@ -31,9 +36,10 @@ button {
 }
 
 aside {
+  position: absolute;
   transform: scale(0.2, 0.2);
-  margin-left: 9%;
-  margin-top: -13%;
+  margin-left: 34%;
+  margin-top: 24%;
 
 }
 
@@ -55,9 +61,7 @@ header {
 
 }
 
-li {
-    width:100%;
-}
+
 
 .getWeather {
     float: left;
@@ -65,14 +69,16 @@ li {
     visibility: hidden;
 }
 
-.city {
+input.city {
+  position: absolute;
   border-radius: 25px;
   text-align: center;
-  width: 40%;
-  margin-left: -32%;
-  margin-top: 30%;
+  width: 22%;
+  margin-left: 35%;
+  margin-top: 15%;
   opacity: 0.8;
 }
+
 
 .reset {
   color: maroon;
