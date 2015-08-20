@@ -1,18 +1,13 @@
 require 'sinatra'
-require 'sinatra/base'
-
-
-
-class Thermostat < Sinatra::Base
+require 'json'
 
   set :public_folder, proc { File.join(root) }
 
-  get '/' do
-    erb :'index2.html'
-  end
-
-
-
+get '/temperature/:remoteTemperature' do
+  session[:remoteTemperature] = params[:remoteTemperature]
 end
+
+
+
 
 

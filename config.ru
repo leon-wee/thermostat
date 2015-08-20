@@ -1,3 +1,3 @@
 require './server'
 
-run Thermostat
+run Sinatra::Application
