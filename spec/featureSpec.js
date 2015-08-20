@@ -67,4 +67,36 @@ var thermostat = new Thermostat();
     expect('span').toHaveClass("text--red");
   });
 
+  it('expects the city to be displayed', function() {
+    // spyOn($, "getJSON")
+    // $('input:text').val('London');
+    // // var event = jQuery.Event("keypress");
+    // // event.which = 13;
+    // // $('input:text').trigger(event);
+    // $('.getWeather').click();
+    // expect($.getJSON).toHaveBeenCalled();
+    // expect('.weather').toContainText('London');
+    $('.city').val('London');
+    $('.getWeather').click();
+    // runs(function() {
+    //   flag = false;
+    //   value = 0;
+    //   intId = setInterval(function() {
+    //     console.log(value);
+    //     if (++value == 3) { clearInterval(intId); flag = true; }
+    //   }, 500);
+    // });
+
+    // waitsFor(function() {
+    //   return flag;
+    // }, "The Value should be incremented", 5000);
+
+    // runs(function() {
+    //   expect(value).toEqual(4); //this will fail
+    // });
+    expect('.city_display').toContainText('London');
+  });
+
+
+
 });

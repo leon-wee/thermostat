@@ -30,10 +30,11 @@ $(document).ready(function() {
 
   $('input:text').keypress(function(event) {
     if (event.keyCode == 13) {
-      $('input:submit').click();
+      $('.getWeather').click();
       $('input:text').val('');
     }
   });
+
 
 
 
