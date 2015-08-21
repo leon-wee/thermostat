@@ -1,4 +1,4 @@
-describe('Thermostat',function(){
+describe('Thermostat feature tests',function(){
 var thermostat = new Thermostat();
 
   beforeEach(function(){
@@ -67,35 +67,37 @@ var thermostat = new Thermostat();
     expect('span').toHaveClass("text--red");
   });
 
-  it('expects the city to be displayed', function() {
-    // spyOn($, "getJSON")
-    // $('input:text').val('London');
-    // // var event = jQuery.Event("keypress");
-    // // event.which = 13;
-    // // $('input:text').trigger(event);
-    // $('.getWeather').click();
-    // expect($.getJSON).toHaveBeenCalled();
-    // expect('.weather').toContainText('London');
-    $('.city').val('London');
-    $('.getWeather').click();
-    // runs(function() {
-    //   flag = false;
-    //   value = 0;
-    //   intId = setInterval(function() {
-    //     console.log(value);
-    //     if (++value == 3) { clearInterval(intId); flag = true; }
-    //   }, 500);
-    // });
+  describe('should call weather API', function() {
+    it('expects the city to be displayed', function() {
+      $('.city').val('London');
+      $('.getWeather').click();
+      expect($('.city_display').html()).toEqual('London');
+    });
 
-    // waitsFor(function() {
-    //   return flag;
-    // }, "The Value should be incremented", 5000);
+    it('specifying response when you need it', function() {
+      spyOn($, "getJSON").and.callFake(function(url, callback) {
+        callback({"weather":[{"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d"}],"main":{"temp":20.28,"pressure":1021,"humidity":77,"temp_min":18,"temp_max":22.22}});
+      });
+      $('.city').val('London');
+      $('.getWeather').click();
+      expect($.getJSON).toHaveBeenCalled();
+      expect($('.weather').html()).toEqual('light intensity drizzle');
+    });
 
-    // runs(function() {
-    //   expect(value).toEqual(4); //this will fail
-    // });
-    expect('.city_display').toContainText('London');
+    it('should display city temperature from API', function() {
+      spyOn($, "getJSON").and.callFake(function(url, callback) {
+        // callback( {"main":{"temp": 20}, "weather": [{}]} );
+        callback({"weather":[{"id":300,"main":"Drizzle","description":"light intensity drizzle","icon":"09d"}],"main":{"temp":20.28,"pressure":1021,"humidity":77,"temp_min":18,"temp_max":22.22}});
+      });
+      $('.city').val('London');
+      $('.getWeather').click();
+      expect($.getJSON).toHaveBeenCalled();
+      expect('.city_temperature').toContainText(20);
+    });
+
   });
+
+
 
 
 

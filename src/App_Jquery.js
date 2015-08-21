@@ -11,7 +11,6 @@ $(document).ready(function() {
   function update() {
     $('span').html(thermostat.temperature);
     temperatureColour();
-    getCurrentTemperature();
   };
 
   update();
@@ -45,7 +44,7 @@ $(document).ready(function() {
 
 
   function weatherInfo(city) {
-    $.getJSON("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=json&units=metric&cnt=10", function(weather_info) {
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q="+ city + "&mode=json&units=metric", function(weather_info) {
       console.log(weather_info);
       showWeather(weather_info);
       showTemperature(weather_info);
@@ -53,11 +52,11 @@ $(document).ready(function() {
   }
 
   function showWeather(weather_info) {
-    $(".weather").html(weather_info.list[0].weather[0].description)
+    $(".weather").html(weather_info.weather[0].description)
   };
 
   function showTemperature(weather_info) {
-    $(".city_temperature").html(Math.round(weather_info.list[0].temp.day) + '&#8451');
+    $(".city_temperature").html(Math.round(weather_info.main.temp) + '&#8451');
   };
 
   function displayCity(city) {
@@ -72,11 +71,11 @@ $(document).ready(function() {
     }
   });
 
-  function getCurrentTemperature() {
-    $.getJSON("http://localhost:9292/temperature/" + thermostat.temperature, function(remoteTemperature) {
-      console.log(remoteTemperature);
-    });
-  }
+  // function getCurrentTemperature() {
+  //   $.getJSON("http://localhost:9292/temperature/" + thermostat.temperature, function(remoteTemperature) {
+  //     console.log(remoteTemperature);
+  //   });
+  // }
 
 
 

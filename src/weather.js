@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 
   function weatherInfo(city) {
-    $.getJSON("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "&mode=json&units=metric&cnt=10", function(weather_info) {
+    $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&mode=json&units=metric", function(weather_info) {
       console.log(weather_info);
       showWeather(weather_info);
       showTemperature(weather_info);
