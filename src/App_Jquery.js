@@ -9,21 +9,9 @@ $(document).ready(function() {
     });
   };
 
-
-  //{current_temp: thermostat.temperature});
-
   var sendTemp = function() {
     $.post('/temperature', {current_temp: thermostat.temperature});
   };
-
-   // var getTemp = function() {
-   //   $.getJSON("/temperature" , function(result) {
-   //     $("span").text(result.temperature);
-   //       thermostat.temperature = parseInt(result.temperature);
-   //       temperatureColour();
-   //   });
-   // }
-
 
   function temperatureColour() {
     $('span').removeClass().addClass(thermostat.colour());
@@ -34,25 +22,7 @@ $(document).ready(function() {
     temperatureColour();
   };
 
-
-
   getTemp();
-  // sendTemp();
-  // temperatureColour();
-
-
-  // function update() {
-  //   sendTemp();
-  //   getTemp();
-  // };
-
-  // function displaysTemperature() {
-  //   $('span').html(thermostat.temperature);
-  // };
-
-  // update();
-
-  // getCurrentTemperature();
 
   $('.plus').click(function() {
     thermostat.up();

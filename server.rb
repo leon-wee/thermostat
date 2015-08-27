@@ -17,7 +17,6 @@ end
 
 post '/temperature' do
   session[:persist_temperature] = params[:current_temp]
-  p session
 end
 
 
