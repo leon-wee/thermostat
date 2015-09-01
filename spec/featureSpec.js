@@ -97,6 +97,29 @@ var thermostat = new Thermostat();
 
   });
 
+  describe('Ajax', function() {
+    var thermostat = new Thermostat();
+    it('receives a get request of the previous temperature', function() {
+      jasmine.getFixtures().fixturesPath = '.';
+      spyOn($, 'getJSON');
+      loadFixtures('index2.html');
+      expect($.getJSON).toHaveBeenCalled();
+      expect($.getJSON.calls.mostRecent().args[0]).toEqual('/temperature/' + thermostat.temperature);
+    });
+
+    it('displays the previous temperature', function() {
+      jasmine.getFixtures().fixturesPath = '.';
+      var APIResponse = {temperature : 24};
+      spyOn($, 'getJSON');
+      loadFixtures('index2.html');
+      expect($.getJSON).toHaveBeenCalled();
+      $.getJSON.calls.mostRecent().args[1](APIResponse);
+      expect('span').toContainText('24');
+    });
+  });
+
+
+
 
 
 
